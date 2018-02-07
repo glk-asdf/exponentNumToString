@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>科学记数法转字符串</title>
+	<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+<input type="text" placeholder="输入较长数字">
+	<div></div>
+	<p></p>
+</body>
+<script>
+	$('input').on('change',function(){
+		var val = $(this).val();
+		val = parseFloat(val) || 0;
+		$('div').text(val);
+		$('p').text(exponentNumToString(val));
+	})
+</script>
+</html>
